@@ -76,7 +76,8 @@ Vagrant.configure("2") do |config|
     yum install -y mod_ssl
 
     # Install Apache Configs
-    cp /vagrant/http.conf /etc/httpd/conf.d/
+    cp -b /vagrant/http.conf /etc/httpd/conf.d/
+    cp -b /vagrant/ssl.conf /etc/httpd/conf.d/
 
     # Start / Enable HTTPD
     systemctl start httpd
