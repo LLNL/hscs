@@ -17,12 +17,22 @@ respective documentation.
 
 This project uses the hostname ``vagrant.local`` for the default IP address
 defined in the Vagrant files, to make use of this hostname, you will need to add
-it to your local ``/etc/hosts`` file, and restart your networking. On macOS:
+it to your local ``/etc/hosts`` file on the VM host, and restart your networking. 
+
+#### macOS
 
 ```bash
 echo "192.168.33.10   vagrant.local" >> /etc/hosts
 sudo killall -HUP mDNSResponder
 ```
+
+#### Linux
+
+```bash
+echo "192.168.33.10   vagrant.local" >> /etc/hosts
+```
+
+Changes should take effect immediately.
 
 ### Quickstart
 
